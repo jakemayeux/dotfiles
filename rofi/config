@@ -1,0 +1,25 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! User: milouse
+! Copyright: Étienne Deparis
+! ------------------------------------------------------------------------------
+! "Color scheme for normal row" Set from: File
+!rofi.color-normal:                   argb:00272822, #f8f8f2, argb:00272822, #141411, #f8f8f2
+! "Color scheme for urgent row" Set from: File
+!rofi.color-urgent:                   argb:00272822, #f92672, argb:00272822, #f92672, #f8f8f2
+! "Color scheme for active row" Set from: File
+!rofi.color-active:                   argb:00FD5500, #FD5500, argb:00FD5500, #FD5500, #FD5500
+!rofi.color-urgent:                   argb:00FD5500, #FD5500, argb:00FD5500, #FD5500, #FD5500
+rofi.color-normal:                   argb:00272822, argb:aacccccc, argb:00272822, argb:00111111, #f8f8f8
+!rofi.color-normal:                   argb:00272822, #f8f8f8, argb:00272822, #ea854f, #272822
+!rofi.color-normal:                   argb:00272822, #f8f8f2, argb:00272822, #141411, #f8f8f2
+!rofi.color-active:                   argb:00272822, #a6e22a, argb:00272822, #141411, #a6e22a
+! "Color scheme window" Set from: File
+rofi.color-window:                   argb:55181818, #002b36, #06db74
+!rofi.color-window:                   argb:ee272822, #002b36, #06db74
+! "Separator style (none, dash, solid)" Set from: File
+rofi.separator-style:                solid
+
+rofi.font: Dejavu Sans 20
+
+rofi.hide-scrollbar: true
