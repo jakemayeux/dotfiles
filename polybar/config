@@ -1,0 +1,171 @@
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;BARS;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+[bar/hdmi]
+monitor = HDMI2
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+;foreground = #b7bdca
+width = 1920
+height = 16
+modules-left = bspwm 
+modules-center = time div stats battery 
+modules-right = volume
+font-0 = Sans-Regular:size=10;0
+font-1 = DejaVu Sans:size=10;0
+bottom = true
+
+[bar/bottom]
+monitor = eDP1
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+;foreground = #b7bdca
+width = 2560
+height = 32
+modules-left = bspwm 
+modules-center = time div stats battery 
+modules-right = volume
+font-0 = Sans-Regular:size=17;0
+font-1 = DejaVu Sans:size=16;0
+bottom = true
+
+[bar/small]
+;background = #242a34
+;background = #242424
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+;foreground = #b7bdca
+width = 1280
+height = 16
+modules-left = time
+modules-center = bspwm
+modules-right = stats battery
+font-0 = Sans-Regular:size=8;0
+font-1 = DejaVu Sans:size=8;0
+
+[bar/2bwm]
+;background = #242a34
+;background = #242424
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+;foreground = #b7bdca
+width = 2560
+height = 32
+modules-left = time
+modules-center = bspwm
+modules-right = stats battery
+font-0 = Sans-Regular:size=8;0
+font-1 = DejaVu Sans:size=8;0
+
+[bar/bspc_ext_mon]
+;background = #242a34
+;background = #242424
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+;foreground = #b7bdca
+width = 3440
+height = 32
+modules-left = time
+modules-center = bspwm
+modules-right = stats battery
+font-0 = Sans-Regular:size=8;0
+font-1 = DejaVu Sans:size=8;0
+
+[bar/bspc]
+;background = #242a34
+;background = #242424
+background = ${xrdb:color0}
+foreground = ${xrdb:color7}
+;foreground = #b7bdca
+width = 2560
+height = 32
+modules-left = time menu
+modules-center = bspwm
+modules-right = stats battery
+font-0 = Sans-Regular:size=8;0
+font-1 = DejaVu Sans:size=8;0
+
+;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;MODULES;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;
+[module/menu]
+type = custom/menu
+expand-right = false
+menu-0-0 = Browsers
+menu-0-0-exec = menu-open-1
+menu-0-2 = Multimedia
+menu-0-2-exec = menu-open-2
+menu-1-0 = Firefox
+menu-1-0-exec = firefox &
+menu-1-1 = Chromium
+menu-1-1-exec = chromium &
+menu-2-0 = Gimp
+menu-2-0-exec = gimp &
+menu-2-1 = Scrot
+menu-2-1-exec = scrot &
+label-open = Apps
+label-close = x
+label-serparator = |
+
+[module/volume]
+type = custom/script
+padding = 50
+exec = /home/jdm/get-volume
+
+[module/stats]
+type = custom/script
+padding = 100
+exec = /home/jdm/get-stats
+
+[module/cpu]
+type = internal/cpu
+interval = 10
+;format = <label> <bar-load>
+;label = C
+
+[module/div]
+type = custom/text
+content = "   ‡   "
+
+[module/pipe]
+type = custom/text
+content = |
+
+[module/battery]
+type = internal/battery
+full-at = 88
+battery = BAT0
+adapter = ADP1
+
+[module/time]
+type = internal/date
+interval = 1.0
+label = %date%, %time%
+;date = %Y-%m-%d%
+;date-alt = %A, %d %B %Y
+date = %d  %A
+date-alt = %B#%m  '%y
+time = %l:%M %p
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state>
+
+label-focused = %name%
+;label-focused-foreground = #fff
+label-focused-foreground = #c1467f
+label-focused-padding = 1
+
+label-occupied = %name%
+;label-occupied-foreground = #b7bdca
+label-occupied-foreground = ${xrdb:color4}
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-padding = 1
+
+label-empty = %name%
+;label-empty-foreground = #555
+label-empty-foreground = $(xrdb:color0)
+label-empty-padding = 1
