@@ -1,0 +1,1 @@
+/home/jdm/.vimrc
